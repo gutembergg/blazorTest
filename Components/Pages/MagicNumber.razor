@@ -1,0 +1,19 @@
+﻿@page "/magic-number"
+@inherits MagicNumberBase
+
+<h3>MagicNumber</h3>
+
+<h4>Deniner le nombre entre 0 et @NumberMax</h4>
+
+<div>
+    <input type="number" @bind="value" />
+    <button class="btn btn-primary" @onclick="TestNumber">Click me</button>
+</div>
+
+<div>@NumberRemainigLife</div>
+<div>
+    @for (int i = 0; i < NumberRemainigLife; i++)
+    {
+        <span>&hearts;</span>
+    }
+</div>
